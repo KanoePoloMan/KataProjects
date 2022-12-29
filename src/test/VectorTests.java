@@ -1,3 +1,5 @@
+package test;
+
 import Vectors.Vector;
 //import org.testng.annotations.Test;
 
@@ -12,17 +14,17 @@ public class VectorTests {
 
     @org.junit.jupiter.api.Test
     public void testVectorsLength() {
-        assertEquals(5.09D, vector.VectorsLength());
+        assertEquals(5.385164807134504, vector.VectorsLength());
     }
 
     @org.junit.jupiter.api.Test
     public void testScalarComposition() {
-        assertEquals(29, vector.ScalarComposition(vector));
+        assertEquals(29.0, vector.ScalarComposition(vector));
     }
 
     @org.junit.jupiter.api.Test
     public void testVectorComposition() {
-        assertEquals(new Vector(0, 0, 0), vector.VectorComposition(vector));
+        assertEquals(new double[]{0, 0, 0}, vector.VectorComposition(vector));
     }
 
     @org.junit.jupiter.api.Test
@@ -32,18 +34,18 @@ public class VectorTests {
 
     @org.junit.jupiter.api.Test
     public void testVectorSumm() {
-        assertEquals(new Vector(4, 6, 8), vector.VectorSumm(vector));
+        assertEquals(new double[]{4, 6, 8}, vector.VectorSumm(vector));
     }
 
     @org.junit.jupiter.api.Test
     public void testVectorDifference() {
-        assertEquals(new Vector(0, 0, 0), vector.VectorDifference(vector));
+        assertEquals(new double[]{0, 0, 0}, vector.VectorDifference(vector));
     }
 
     @org.junit.jupiter.api.Test
     public void testRandomVectors() {
         int n = 5;
-        assertEquals(new int[n][].length, vector.RandomVectors(n).length);
+        assertEquals(new double[n][].length, vector.RandomVectors(n).length);
     }
 
     @org.junit.jupiter.api.Test
